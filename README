@@ -1,0 +1,28 @@
+# Periodic task system!
+
+This package is multi-architecture enabled.
+
+To build for both amd64 and armhf, on an amd64 host, create the binaries in the architecture
+dependent directories. the magic-bin/periodic launch script will do the magic
+to find the right architecture and launch the right binary.
+
+To build simply do this:
+
+ # get periodic sources
+ 1. go get -v github.com/Lupino/periodic/cmd/periodic
+
+ # change to the x86_64 directory and build the binary...
+ 2. cd magic-bin/x86_64-linux-gnu
+ 3. GOOS=linux GOARCH=amd64 go build github.com/Lupino/periodic/cmd/periodic
+
+ # switch to the armhf directory and build for ARM
+ 4. cd ../arm-linux-gnueabihf
+ 5. GOOS=linux GOARCH=arm go build github.com/Lupino/periodic/cmd/periodic
+
+ # go to top level dir and build the snapp
+ 6. cd ..
+ 7. snappy build .
+
+This produces a snappy package for you that you can try on your snappy system.
+
+Have fun!
