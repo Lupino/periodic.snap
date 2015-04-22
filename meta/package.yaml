@@ -2,7 +2,7 @@ name: periodic.lupino
 vendor: Li Meng Jun <lmjubuntu@gmail.com>
 architecture: [amd64, armhf]
 icon: meta/go.svg
-version: 0.1.6
+version: 0.1.7
 binaries:
  - name: magic-bin/periodic
    description: "Periodic task system."
